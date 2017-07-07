@@ -1,0 +1,19 @@
+---
+
+- name: Install Prosody XMPP Server
+  package: name=prosody state=latest
+  become: true
+
+- name: Install libselinux-python
+  package: name=libselinux-python state=latest
+  become: true
+
+- name: Configuring Prosody
+  template:
+    src: prosody.cfg.lua.j2
+    dest: /etc/prosody/prosody.cfg.lua
+    owner: root
+    group: prosody
+    mode: u=rw,g=r,o=r
+  become: true
+  notify: restart prosody 

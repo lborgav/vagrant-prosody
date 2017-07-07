@@ -1,0 +1,9 @@
+---
+
+- name: reload prosody
+  service: name=prosody state=reloaded
+  sudo: true
+
+- name: restart prosody
+  service: name=prosody state=restarted
+  sudo: true
