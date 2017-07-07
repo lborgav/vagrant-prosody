@@ -35,3 +35,7 @@ and type your password. After this step, you gonna have Prosody running with you
 ## Connecting to Prosody
 
 Using an app like Adium (for mac), register to an account admin@localhost with the password you set up in the last step and you should be **online**!
+
+## Disclaimer
+
+Based on geerlingguy's vagrant examples
